@@ -27,3 +27,7 @@ Description of steps of the R script
     Appropriately labeling the data set with descriptive variable names.
     From the data set in step 4, creating a second, independent tidy data set with the average of each variable for each activity and each subject.
     Saving second dataset
+
+Dependencies
+
+    R script file installs all the dependencies automatically. It depends on data.table and plyr packages. 
