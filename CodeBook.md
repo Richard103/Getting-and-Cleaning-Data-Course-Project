@@ -2,7 +2,9 @@
 #The enviroment calls libraries data.table and plyr.
 
 The paths to datasets are created like:
+
         pathx <- file.path("~", "./data/UCI HAR Dataset/", "fileName.txt")
+        
         pathy <- file.path("~", "./data/UCI HAR Dataset/test/", "fileName.txt") 
 
 Variables "Y_train" and "Y_test" consist data from “Y_train.txt” and “Y_test.txt”
@@ -19,8 +21,9 @@ Variable "activity" from the file “activity_labels.txt” consists Levels
 Script uses activity, subject_train, subject_test and features as part of descriptive variable names for data in data frame.
 
 #Merge test and train data separately:
-  Variable "dataTest" binds by rows variables: subject_test, y_test, X_test
-  Variable "dataTrain" binds by rows variables:subject_train, y_train, X_train
+
+          Variable "dataTest" binds by rows variables: subject_test, y_test, X_test
+          Variable "dataTrain" binds by rows variables:subject_train, y_train, X_train
 
 #Merge all data in one dataset oneData by rows of variables dataTrain and dataTest
 
@@ -37,7 +40,9 @@ Extract data from in variable extractedData
         "BodyBody" substituted by "Body"
 
 From the variable extractedData creating a second, independent tidy data set with the average of each variable for each activity and each subject.
+
 The new variable named "secondData" is created by using plyr package function aggregate.
+
 secondData is ordered by variables Subject and Activity_ID.
 
 secondData is saved in the file "./tidyDataset.txt".
