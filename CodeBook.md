@@ -5,17 +5,17 @@ The paths to datasets are created like:
         pathx <- file.path("~", "./data/UCI HAR Dataset/", "fileName.txt")
         pathy <- file.path("~", "./data/UCI HAR Dataset/test/", "fileName.txt") 
 
-Variables "Y_train" and "Y_test" consist data from “Y_train.txt” and “Y_test.txt”
-Variables "subject_train" and "subject_test" consist of data from “subject_train.txt” and subject_test.txt"
-Variables "X_test" and "Y_test" consist data from “X_train.txt” and “X_test.txt”
-Variable "features" from the file “features.txt” consists names of variables
-Variable "activity" from the file “activity_labels.txt” consists Levels
+  Variables "Y_train" and "Y_test" consist data from “Y_train.txt” and “Y_test.txt”
+  Variables "subject_train" and "subject_test" consist of data from “subject_train.txt” and subject_test.txt"
+  Variables "X_test" and "Y_test" consist data from “X_train.txt” and “X_test.txt”
+  Variable "features" from the file “features.txt” consists names of variables
+  Variable "activity" from the file “activity_labels.txt” consists Levels
 
 Script uses activity, subject_train, subject_test and features as part of descriptive variable names for data in data frame.
 
 Merge test and train data separately:
-Variable "dataTest" binds by rows variables: subject_test, y_test, X_test
-Variable "dataTrain" binds by rows variables:subject_train, y_train, X_train
+  Variable "dataTest" binds by rows variables: subject_test, y_test, X_test
+  Variable "dataTrain" binds by rows variables:subject_train, y_train, X_train
 
 Merge all data in one dataset oneData by rows of variables dataTrain and dataTest
 
