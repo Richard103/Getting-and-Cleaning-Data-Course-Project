@@ -1,5 +1,5 @@
 
-The enviroment calls libraries data.table and plyr.
+#The enviroment calls libraries data.table and plyr.
 
 The paths to datasets are created like:
         pathx <- file.path("~", "./data/UCI HAR Dataset/", "fileName.txt")
@@ -13,17 +13,17 @@ The paths to datasets are created like:
 
 Script uses activity, subject_train, subject_test and features as part of descriptive variable names for data in data frame.
 
-Merge test and train data separately:
+#Merge test and train data separately:
   Variable "dataTest" binds by rows variables: subject_test, y_test, X_test
   Variable "dataTrain" binds by rows variables:subject_train, y_train, X_train
 
-Merge all data in one dataset oneData by rows of variables dataTrain and dataTest
+#Merge all data in one dataset oneData by rows of variables dataTrain and dataTest
 
 Extracts  only the measurements on the mean and standard deviation for each measurement.
 Create logical vector extract
 Extract data from in variable extractedData
 
-Appropriately labeling the data set with descriptive variable names.
+#Appropriately labeling the data set with descriptive variable names.
         "^t" substituted by "time"
         "^f" substituted by "frequency"
         "Acc" substituted by "Accelerometer"
